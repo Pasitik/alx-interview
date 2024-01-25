@@ -16,7 +16,8 @@ pattern = (
 
 count = 0
 _sum = 0
-status_dic = {}
+status_dic = {'200': 0, '301': 0, '400': 0, '401': 0,
+              '403': 0, '404': 0, '405': 0, '500': 0}
 
 try:
     for line in sys.stdin:
@@ -24,9 +25,7 @@ try:
         if match:
             line_parts = line.split(" ")
             status = line_parts[7]
-            if status not in status_dic:
-                status_dic[status] = 1
-            else:
+            if status in status_dic.keys():
                 status_dic[status] += 1
             count += 1
             _sum += int(line_parts[8])
