@@ -34,7 +34,8 @@ try:
                 count = 0
                 print("File size: {}".format(_sum))
                 for key, value in sorted(status_dic.items()):
-                    print("{}: {}".format(key, value))
+                    if value != 0:
+                        print("{}: {}".format(key, value))
 
 except Exception as err:
     pass
