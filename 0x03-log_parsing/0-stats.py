@@ -37,6 +37,9 @@ try:
                         print("{}: {}".format(key, value))
 
 except KeyboardInterrupt:
+    pass
+
+finally:
     print('File size: {}'.format(_sum))
     for key, value in sorted(status_dic.items()):
         if value != 0:
