@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # iterate thru rows
     while r < n:
         goback = False
-        # iterate thru columns
+        # iterate through columns
         while c < n:
             # check is current column is safe
             safe = True
