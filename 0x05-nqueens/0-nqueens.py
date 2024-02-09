@@ -86,6 +86,6 @@ if __name__ == '__main__':
 
     for idx, val in enumerate(solutions):
         if idx == len(solutions) - 1:
-            print(val, end='')
+            print(val)
         else:
             print(val)
